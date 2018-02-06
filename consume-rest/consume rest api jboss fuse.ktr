@@ -437,23 +437,28 @@
   </notepads>
   <order>
     <hop>
-      <from>Generate Rows</from>
-      <to>REST Client Book</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>REST Client Book</from>
       <to>JSON Input</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Generate URL</from>
+      <to>Combine URL</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Combine URL</from>
+      <to>REST Client Book</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>JSON Input</from>
-      <to>Text file output</to>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Generate Rows</name>
+    <name>Generate URL</name>
     <type>RowGenerator</type>
     <description />
     <distribute>Y</distribute>
@@ -466,12 +471,24 @@
     <fields>
       <field>
         <name>bookid</name>
-        <type>Integer</type>
+        <type>String</type>
         <format />
         <currency />
         <decimal />
         <group />
-        <nullif>2</nullif>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>url</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif>http://localhost:40000/box/library/blueprint/listbook/listbook/</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -490,58 +507,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>REST Client Book</name>
-    <type>Rest</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <applicationType>JSON</applicationType>
-    <method>GET</method>
-    <url>http://localhost:40000/box/library/blueprint/listbook/</url>
-    <urlInField>N</urlInField>
-    <dynamicMethod>N</dynamicMethod>
-    <methodFieldName>bookid</methodFieldName>
-    <urlField>bookid</urlField>
-    <bodyField />
-    <httpLogin />
-    <httpPassword>Encrypted </httpPassword>
-    <proxyHost />
-    <proxyPort />
-    <preemptive>N</preemptive>
-    <trustStoreFile />
-    <trustStorePassword>Encrypted </trustStorePassword>
-    <headers>
-      </headers>
-    <parameters>
-      </parameters>
-    <matrixParameters>
-      </matrixParameters>
-    <result>
-      <name>result</name>
-      <code />
-      <response_time />
-      <response_header />
-    </result>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>336</xloc>
+      <xloc>80</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -654,8 +620,8 @@
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
-    <type>TextFileOutput</type>
+    <name>REST Client Book</name>
+    <type>Rest</type>
     <description />
     <distribute>Y</distribute>
     <custom_distribution />
@@ -664,38 +630,111 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding />
-    <endedLine />
-    <fileNameInField>N</fileNameInField>
-    <fileNameField />
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>/home/ihsan/Documents/pentaho-workspace/consume-rest/file</name>
-      <is_command>N</is_command>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format />
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
+    <applicationType>JSON</applicationType>
+    <method>GET</method>
+    <url>http://localhost:40000/box/library/blueprint/listbook/listbook/</url>
+    <urlInField>Y</urlInField>
+    <dynamicMethod>N</dynamicMethod>
+    <methodFieldName>bookid</methodFieldName>
+    <urlField>fullURL</urlField>
+    <bodyField />
+    <httpLogin />
+    <httpPassword>Encrypted </httpPassword>
+    <proxyHost />
+    <proxyPort />
+    <preemptive>N</preemptive>
+    <trustStoreFile />
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <headers>
+      <header>
+        <field>bookid</field>
+        <name>bookid</name>
+      </header>
+    </headers>
+    <parameters>
+      </parameters>
+    <matrixParameters>
+      </matrixParameters>
+    <result>
+      <name>result</name>
+      <code />
+      <response_time />
+      <response_header />
+    </result>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Combine URL</name>
+    <type>Janino</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <formula>
+      <field_name>fullURL</field_name>
+      <formula_string>url+bookid</formula_string>
+      <value_type>String</value_type>
+      <value_length>10000</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
     <fields>
+      <field>
+        <name>author</name>
+        <rename />
+      </field>
+      <field>
+        <name>id</name>
+        <rename />
+      </field>
+      <field>
+        <name>title</name>
+        <rename />
+      </field>
+      <field>
+        <name>stock</name>
+        <rename />
+      </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
     <cluster_schema />
     <remotesteps>
@@ -705,7 +744,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>640</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
