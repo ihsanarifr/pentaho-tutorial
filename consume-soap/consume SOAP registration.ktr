@@ -496,6 +496,51 @@
     </GUI>
   </step>
   <step>
+    <name>HTTP Post</name>
+    <type>HTTPPOST</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <postafile>N</postafile>
+    <encoding>UTF-8</encoding>
+    <url>http://localhost:40000/box/library/blueprint/register?wsdl</url>
+    <urlInField>N</urlInField>
+    <urlField />
+    <requestEntity>requestXml</requestEntity>
+    <httpLogin />
+    <httpPassword>Encrypted </httpPassword>
+    <proxyHost />
+    <proxyPort />
+    <socketTimeout />
+    <connectionTimeout />
+    <closeIdleConnectionsTime />
+    <lookup>
+      </lookup>
+    <result>
+      <name>responseXml</name>
+      <code>statusCode</code>
+      <response_time />
+      <response_header />
+    </result>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Modified Java Script Value</name>
     <type>ScriptValueMod</type>
     <description />
@@ -561,51 +606,6 @@ var requestXml=request.toXMLString();
     </remotesteps>
     <GUI>
       <xloc>368</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>HTTP Post</name>
-    <type>HTTPPOST</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <postafile>N</postafile>
-    <encoding>UTF-8</encoding>
-    <url>http://localhost:40000/box/library/blueprint/register?wsdl</url>
-    <urlInField>N</urlInField>
-    <urlField />
-    <requestEntity>requestXml</requestEntity>
-    <httpLogin />
-    <httpPassword>Encrypted </httpPassword>
-    <proxyHost />
-    <proxyPort />
-    <socketTimeout />
-    <connectionTimeout />
-    <closeIdleConnectionsTime />
-    <lookup>
-      </lookup>
-    <result>
-      <name>responseXml</name>
-      <code>statusCode</code>
-      <response_time />
-      <response_header />
-    </result>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>528</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
