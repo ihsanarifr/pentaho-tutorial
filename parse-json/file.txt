@@ -1,0 +1,85 @@
+ID;NAME;PPU;TYPE;BETTER_ID;BETTER_TYPE;FILLING_ID;FILLING_NAME;FILLING_ADD_COST;TOPPING_ID;TOPPING_TYPE
+0001;Cake;0.55;donut;1001;Regular;;;;5001;None
+0001;Cake;0.55;donut;1001;Regular;;;;5002;Glazed
+0001;Cake;0.55;donut;1001;Regular;;;;5003;Chocolate
+0001;Cake;0.55;donut;1001;Regular;;;;5004;Maple
+0001;Cake;0.55;donut;1001;Regular;;;;5005;Sugar
+0001;Cake;0.55;donut;1001;Regular;;;;5006;Chocolate with Sprinkles
+0001;Cake;0.55;donut;1001;Regular;;;;5007;Powdered Sugar
+0001;Cake;0.55;donut;1002;Chocolate;;;;5001;None
+0001;Cake;0.55;donut;1002;Chocolate;;;;5002;Glazed
+0001;Cake;0.55;donut;1002;Chocolate;;;;5003;Chocolate
+0001;Cake;0.55;donut;1002;Chocolate;;;;5004;Maple
+0001;Cake;0.55;donut;1002;Chocolate;;;;5005;Sugar
+0001;Cake;0.55;donut;1002;Chocolate;;;;5006;Chocolate with Sprinkles
+0001;Cake;0.55;donut;1002;Chocolate;;;;5007;Powdered Sugar
+0001;Cake;0.55;donut;1003;Blueberry;;;;5001;None
+0001;Cake;0.55;donut;1003;Blueberry;;;;5002;Glazed
+0001;Cake;0.55;donut;1003;Blueberry;;;;5003;Chocolate
+0001;Cake;0.55;donut;1003;Blueberry;;;;5004;Maple
+0001;Cake;0.55;donut;1003;Blueberry;;;;5005;Sugar
+0001;Cake;0.55;donut;1003;Blueberry;;;;5006;Chocolate with Sprinkles
+0001;Cake;0.55;donut;1003;Blueberry;;;;5007;Powdered Sugar
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5001;None
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5002;Glazed
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5003;Chocolate
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5004;Maple
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5005;Sugar
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5006;Chocolate with Sprinkles
+0001;Cake;0.55;donut;1004;Devil's Food;;;;5007;Powdered Sugar
+0002;Raised;0.55;donut;1001;Regular;;;;5001;None
+0002;Raised;0.55;donut;1001;Regular;;;;5002;Glazed
+0002;Raised;0.55;donut;1001;Regular;;;;5003;Chocolate
+0002;Raised;0.55;donut;1001;Regular;;;;5004;Maple
+0002;Raised;0.55;donut;1001;Regular;;;;5005;Sugar
+0003;Old Fashioned;0.55;donut;1001;Regular;;;;5001;None
+0003;Old Fashioned;0.55;donut;1001;Regular;;;;5002;Glazed
+0003;Old Fashioned;0.55;donut;1001;Regular;;;;5003;Chocolate
+0003;Old Fashioned;0.55;donut;1001;Regular;;;;5004;Maple
+0003;Old Fashioned;0.55;donut;1002;Chocolate;;;;5001;None
+0003;Old Fashioned;0.55;donut;1002;Chocolate;;;;5002;Glazed
+0003;Old Fashioned;0.55;donut;1002;Chocolate;;;;5003;Chocolate
+0003;Old Fashioned;0.55;donut;1002;Chocolate;;;;5004;Maple
+0004;Bar;0.75;bar;1001;Regular;7001;None;;5003;Chocolate
+0004;Bar;0.75;bar;1001;Regular;7002;Custard;;5003;Chocolate
+0004;Bar;0.75;bar;1001;Regular;7003;Whipped Cream;;5003;Chocolate
+0004;Bar;0.75;bar;1001;Regular;7001;None;;5004;Maple
+0004;Bar;0.75;bar;1001;Regular;7002;Custard;;5004;Maple
+0004;Bar;0.75;bar;1001;Regular;7003;Whipped Cream;;5004;Maple
+0005;Twist;0.65;twist;1001;Regular;;;;5002;Glazed
+0005;Twist;0.65;twist;1001;Regular;;;;5005;Sugar
+0006;Filled;0.75;filled;1001;Regular;7002;Custard;;5002;Glazed
+0006;Filled;0.75;filled;1001;Regular;7003;Whipped Cream;;5002;Glazed
+0006;Filled;0.75;filled;1001;Regular;7004;Strawberry Jelly;;5002;Glazed
+0006;Filled;0.75;filled;1001;Regular;7005;Rasberry Jelly;;5002;Glazed
+0006;Filled;0.75;filled;1001;Regular;7002;Custard;;5003;Chocolate
+0006;Filled;0.75;filled;1001;Regular;7003;Whipped Cream;;5003;Chocolate
+0006;Filled;0.75;filled;1001;Regular;7004;Strawberry Jelly;;5003;Chocolate
+0006;Filled;0.75;filled;1001;Regular;7005;Rasberry Jelly;;5003;Chocolate
+0006;Filled;0.75;filled;1001;Regular;7002;Custard;;5004;Maple
+0006;Filled;0.75;filled;1001;Regular;7003;Whipped Cream;;5004;Maple
+0006;Filled;0.75;filled;1001;Regular;7004;Strawberry Jelly;;5004;Maple
+0006;Filled;0.75;filled;1001;Regular;7005;Rasberry Jelly;;5004;Maple
+0006;Filled;0.75;filled;1001;Regular;7002;Custard;;5007;Powdered Sugar
+0006;Filled;0.75;filled;1001;Regular;7003;Whipped Cream;;5007;Powdered Sugar
+0006;Filled;0.75;filled;1001;Regular;7004;Strawberry Jelly;;5007;Powdered Sugar
+0006;Filled;0.75;filled;1001;Regular;7005;Rasberry Jelly;;5007;Powdered Sugar
+7001;None;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7002;Custard;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7003;Whipped Cream;;;;;;;;;
+7004;Strawberry Jelly;;;;;;;;;
+7005;Rasberry Jelly;;;;;;;;;
