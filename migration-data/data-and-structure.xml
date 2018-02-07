@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<table>
+<columns>
+<column number="1">
+<name>PRODUCT_CATEGORY_ID</name>
+</column>
+<column number="2">
+<name>NAME</name>
+</column>
+<column number="4">
+<name>PARENT_ID</name>
+</column>
+</columns>
+<rows>
+<row rowNumber="0">
+<value columnNumber="1">1</value>
+<value columnNumber="2">My Category_A</value>
+<value columnNumber="4"></value>
+</row>
+<row rowNumber="1">
+<value columnNumber="1">11</value>
+<value columnNumber="2">Category_A11</value>
+<value columnNumber="4">1</value>
+</row>
+<row rowNumber="2">
+<value columnNumber="1">12</value>
+<value columnNumber="2">Category A12</value>
+<value columnNumber="4">1</value>
+</row>
+<row rowNumber="3">
+<value columnNumber="1">2</value>
+<value columnNumber="2">Category B</value>
+<value columnNumber="4"></value>
+</row>
+<row rowNumber="2">
+<value columnNumber="1">22</value>
+<value columnNumber="2">Category A22</value>
+<value columnNumber="4">2</value>
+</row>
+</rows></table>

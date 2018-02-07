@@ -1,0 +1,3 @@
+$productCatalog=testCatalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Online'])[unique=true,default=$productCatalog:Online]
+$lang=en

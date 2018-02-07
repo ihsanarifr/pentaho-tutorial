@@ -1,0 +1,7 @@
+ZEROCOLUMN;HYBRIS_CODE;HYBRIS_PARENT_ID;NAME;CATALOGVERSION;PERMISSION
+INSERT_UPDATE Category;code[unique=true];supercategories(code,$catalogVersion);name=[lang=$lang];$catalogVersion;allowedPrinsipals(uid)[default='customergroup']
+;H_ROOT;;Root Category;;
+;H_11;H_1;Category_A11;;
+;H_2;H_ROOT;Category B;;
+;;;;$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Online'])[unique=true,default=$productCatalog:Online];
+;;;;$lang=en;
