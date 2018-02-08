@@ -430,7 +430,7 @@
     <created_date>2018/02/07 14:55:26.413</created_date>
     <modified_user>-</modified_user>
     <modified_date>2018/02/07 14:55:26.413</modified_date>
-    <key_for_session_key />
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -493,6 +493,112 @@
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Dimension lookup/update</name>
+    <type>DimensionLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <schema>IHSAN</schema>
+    <table>salesrep_dim</table>
+    <connection>ihsan-oracle</connection>
+    <commit>100</commit>
+    <update>Y</update>
+    <fields>
+      <key>
+        <name>EMPLOYEE_ID</name>
+        <lookup>SALESREP_ID</lookup>
+      </key>
+      <date>
+        <name />
+        <from>date_from</from>
+        <to>date_to</to>
+      </date>
+      <field>
+        <name>FIRST_NAME</name>
+        <lookup>FIRST_NAME</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>LAST_NAME</name>
+        <lookup>LAST_NAME</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>EMAIL</name>
+        <lookup>EMAIL</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>PHONE_NUMBER</name>
+        <lookup>PHONE_NUMBER</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>HIRE_DATE</name>
+        <lookup>HIRE_DATE</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>JOB_ID</name>
+        <lookup>JOB_ID</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>SALARY</name>
+        <lookup>SALARY</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>COMMISSION_PCT</name>
+        <lookup>COMMISSION_PCT</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>MANAGER_ID</name>
+        <lookup>MANAGER_ID</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>DEPARTMENT_ID</name>
+        <lookup>DEPARTMENT_ID</lookup>
+        <update>Insert</update>
+      </field>
+      <return>
+        <name>salesrep_dim_id</name>
+        <rename />
+        <creation_method>tablemax</creation_method>
+        <use_autoinc>N</use_autoinc>
+        <version>version</version>
+      </return>
+    </fields>
+    <sequence />
+    <min_year>1900</min_year>
+    <max_year>2199</max_year>
+    <cache_size>5000</cache_size>
+    <preload_cache>N</preload_cache>
+    <use_start_date_alternative>N</use_start_date_alternative>
+    <start_date_alternative>none</start_date_alternative>
+    <start_date_field_name />
+    <useBatch>N</useBatch>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>sales representativ CSV</name>
     <type>CsvInput</type>
@@ -649,112 +755,6 @@
     </remotesteps>
     <GUI>
       <xloc>128</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dimension lookup/update</name>
-    <type>DimensionLookup</type>
-    <description />
-    <distribute>Y</distribute>
-    <custom_distribution />
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name />
-    </partitioning>
-    <schema>IHSAN</schema>
-    <table>salesrep_dim</table>
-    <connection>ihsan-oracle</connection>
-    <commit>100</commit>
-    <update>Y</update>
-    <fields>
-      <key>
-        <name>EMPLOYEE_ID</name>
-        <lookup>EMPLOYEE_ID</lookup>
-      </key>
-      <date>
-        <name />
-        <from>date_from</from>
-        <to>date_to</to>
-      </date>
-      <field>
-        <name>FIRST_NAME</name>
-        <lookup>FIRST_NAME</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>LAST_NAME</name>
-        <lookup>LAST_NAME</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>EMAIL</name>
-        <lookup>EMAIL</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>PHONE_NUMBER</name>
-        <lookup>PHONE_NUMBER</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>HIRE_DATE</name>
-        <lookup>HIRE_DATE</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>JOB_ID</name>
-        <lookup>JOB_ID</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>SALARY</name>
-        <lookup>SALARY</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>COMMISSION_PCT</name>
-        <lookup>COMMISSION_PCT</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>MANAGER_ID</name>
-        <lookup>MANAGER_ID</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>DEPARTMENT_ID</name>
-        <lookup>DEPARTMENT_ID</lookup>
-        <update>Insert</update>
-      </field>
-      <return>
-        <name>salesrep_dim_id</name>
-        <rename />
-        <creation_method>tablemax</creation_method>
-        <use_autoinc>N</use_autoinc>
-        <version>version</version>
-      </return>
-    </fields>
-    <sequence />
-    <min_year>1900</min_year>
-    <max_year>2199</max_year>
-    <cache_size>5000</cache_size>
-    <preload_cache>N</preload_cache>
-    <use_start_date_alternative>N</use_start_date_alternative>
-    <start_date_alternative>none</start_date_alternative>
-    <start_date_field_name />
-    <useBatch>N</useBatch>
-    <cluster_schema />
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
