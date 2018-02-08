@@ -534,7 +534,7 @@
       <method>none</method>
       <schema_name />
     </partitioning>
-    <filename>/home/ihsan/Documents/pentaho-workspace/etl-transformation/orders_export.csv</filename>
+    <filename>/home/ihsan/Documents/pentaho-workspace/etl-transformation/orders_export_new.csv</filename>
     <filename_field />
     <rownum_field />
     <include_filename>N</include_filename>
